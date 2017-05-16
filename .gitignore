@@ -1,5 +1,9 @@
 *.class
+# exclude eclipse metadata
 .metadata/**
+
+# exclude vim swap files
+*.swp
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/

@@ -1,5 +1,5 @@
 ## This is my idea, how our engine would be of good use xD
-
+Examples in Java
 ### How it would be used
 Game.java is the only class that communicates with the Engine directly. <br>
 Everything else is in components and get`s handled by the Engine.
@@ -32,10 +32,10 @@ public class Game {
 
 ```
 ## Entity/Component architecture like Unity
-I would do the engine like Unity using a Entity-Component-System architecture. <br>
+I would do the engine like ~Unity using a Entity-Component-System architecture. <br>
 We would have to write different Systems, that recieve their data
 from the components and process it. They don`t know anything about
-the engine and other compontents, except a event que.
+the engine and other compontents, except an event que.
 This event que is passed threw every system, to perform inter 
 system communication (e.g. play sound, move?! *to be discussed*). <br>
 

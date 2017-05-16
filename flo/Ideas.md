@@ -11,33 +11,22 @@ public class Game {
 	public Game(){}
 
 	public ArrayList<Entity> init(){
+		ArrayList<Entity> entities = new ArrayList<Entity>();
 		
 		Entity player = new Entity();
 		player.add(new Renderable());
 		player.add(new Controller());
+		entities.add(player);
 
 		Entity tree = new Enity();
 		tree.add(new Renderable());
+		entities.add(tree);
 
 		Entity enemy = new Entity();
-		enemy.add(new Controler(){
-			@Override
-			public atIdle(){
-				moveInCircle(5.0f);
-			}
+		enemy.add(new AI());
+		entities.add(enemy);
 
-			@Override
-			public atPlayerInSight(){
-				shoot();
-			}
-
-			private void shoot(){
-				Entity bullet = new Entity(new Fly(10.5f));
-				spwan(bullet);
-			}
-		});
-
-		return null;
+		return entities;
 	}
 }
 

@@ -39,6 +39,24 @@ the engine and other compontents, except a event que.
 This event que is passed threw every system, to perform inter 
 system communication (e.g. play sound, move?! *to be discussed*). <br>
 
-##
+### Entity
+Is created and holds all the Components added to this entity, until
+it gets passed to the systems. Then it only holds hashes of the components,
+witch have moved into the systems.
+
+### Component
+Holds systemspecific data and a hash of it self, for identification.
+
+### System
+Holds a list of components associated with this system.<br>
+Creates the hashes and transforms the entities. Is responsible for
+inserting and deleting.
+
+## Events
+Every system can have events associated with it.
+
+### Event-que
+Probably a java map of all events, read/write for all systems.<br>
+Gets cleand after every loop.
 
 
